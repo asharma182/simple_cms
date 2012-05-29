@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Cms | <%= @page_title || 'Admin Area' %></title>
+  
+  <%= javascript_include_tag "/javascripts/application" %>
+  <%= javascript_include_tag "/javascripts/jquery" %>
+  <%= javascript_include_tag "application" %>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript"> 
+
+$(document).ready(function(){
+$("#content").click(function(){
+$(this).hide(500);
+
+});
+});
+
+$(document).ready(function(){
+$("#content").click(function(){
+	$(this).show(500);
+});
+});
+
+</script> 
+
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    "/stylesheets/public", :media => "all" %>
+</head>
+<body>
+	
+	<div id="header">
+		<h1>Simple CMS Admin</h1>
+	</div>
+	<div id="main">
+		<% if !flash[:notice].blank? %>
+		<div class="notice">
+			<%= flash[:notice]%>
+		</div>
+		<%end%>
+	
+	<div id="content">
+		
+		   <%= yield(@items) %>
+		
+	</div>
+
+	
+    </div>
+<div id="footer">
+	<p id="copyright">&copy; simple_cms.com/ Abhishek Sharma<p>
+</div>
+
+</body>
+</html>

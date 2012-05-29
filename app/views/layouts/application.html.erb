@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleCms</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "new" %>
+  <%= javascript_include_tag "/javascripts/application" %>
+  <%= csrf_meta_tags %>
+  <%= image_tag('rails.png')%>
+  
+</head>
+<body>
+<p>helloo</p>
+<%= yield %>
+
+</body>
+</html>

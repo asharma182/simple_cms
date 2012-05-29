@@ -1,0 +1,39 @@
+<% @page_title = "Subject List" %>
+
+
+
+<%= link_to("Add new Subjects",{:action => 'new'}, :class => 'back-link')%>
+
+
+
+<div class="Subject list">
+	<h2>Subjects</h2>
+
+<table class="listing" summary="Subject list">
+	<tr class="header">
+		<th>&nbsp</th>
+		<th>Name</th>
+		<th>Visible</th>
+		<th>Pages</th>
+		<th>Actions<th>
+	</tr>
+	<% @subjects.each do |subject| %>
+	<tr>
+		<td><%= subject.position %></td>
+		<td><%= subject.name %></td>
+		<td class="center"><%= subject.visible ? 'Yes' : 'No' %></td>
+		 <td class="center"><%= subject.pages.size %></td>
+		<td class="actions">
+			<%= link_to('Show',{:action => 'show', :id => subject.id},
+				:onclick => "return show(); return true;", :class => 
+				'action show') %>
+			<%= link_to("Edit",{:action => 'edit',:id => subject.id},
+			 :class => 'action edit')%>
+			<%= link_to("Delete",{:action => 'delete', :id => subject.id}, 
+			 :class => 'action delete')%>
+		</td>
+	</tr>
+	<%end%>
+</table>
+
+</div>
