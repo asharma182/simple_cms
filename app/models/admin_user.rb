@@ -1,4 +1,4 @@
-class AdminUser < ActiveRecord::Base
+/*class AdminUser < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :username, :email
 
   EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
@@ -28,4 +28,4 @@ class AdminUser < ActiveRecord::Base
       "#{first_name} #{last_name}"
    end
 
-end
+end */
