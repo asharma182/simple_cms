@@ -13,7 +13,7 @@
  //=require jquery
 //=require jquery_ujs
 //= require_tree .
-
+/*
 function show(){
 	var p=confirm("Do you want to view this subject?");
 	if (!p)
@@ -21,6 +21,6 @@ function show(){
 	else 
 		return true;
 }
-
+*/
 
 

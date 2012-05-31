@@ -8,25 +8,11 @@
   <%= javascript_include_tag "application" %>
 
 <script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript"> 
-
-$(document).ready(function(){
-$("#content").click(function(){
-$(this).hide(500);
-
-});
-});
-
-$(document).ready(function(){
-$("#content").click(function(){
-	$(this).show(500);
-});
-});
-
-</script> 
+<script type="text/javascript" src="new.js"> </script> 
 
   <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag    "/stylesheets/public", :media => "all" %>
+  <%= stylesheet_link_tag    "admin", :media => "all" %>
+   <%= stylesheet_link_tag    "public", :media => "all" %>
 </head>
 <body>
 	
