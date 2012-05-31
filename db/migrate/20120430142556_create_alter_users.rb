@@ -1,3 +1,4 @@
+=begin
 class CreateAlterUsers < ActiveRecord::Migration
   def self.up
     rename_table("users","admin_users")
@@ -19,3 +20,4 @@ class CreateAlterUsers < ActiveRecord::Migration
   end
 
 end
+=end
